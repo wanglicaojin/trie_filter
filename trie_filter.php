@@ -24,7 +24,7 @@ $serv = new swoole_http_server("192.168.10.119", 9502);
 
 $serv->on('Request', function($request, $response) {
     $content = isset($request->get['content']) ? $request->get['content']: '';
-//    $content="傻逼网利宝要跑路了，竟然有假标和萝卜章，怎么办呢，赶紧走吧";
+//    $content="filter test";
 //加载关键词库
     $file=trie_filter_load(__DIR__ . '/blackword.tree');
 //查找
